@@ -15,9 +15,9 @@ BOT_OWNER_ROLE = 'RUNNER' # change to what you need
 
 
 oot_channel_id_list = [
-    "640767819587518484",
-    "611940220350234686",
-    "642715838562172988",
+    "675924896806731820",
+    "650009503453937693",
+    "569420128794443776 ",
     "633937054694375424",
 ]
 
@@ -127,12 +127,12 @@ class Bot(discord.Client):
         self.answer_scores = answer_scores
 
         # embed creation
-        self.embed=discord.Embed(title="**__Flipkart Trivia__**", description="**Connecting To Flipkart Server....** ", color=0xadd8e6 )
+        self.embed=discord.Embed(title="**__Loco Trivia__**", description="**Connecting To Loco Server....** ", color=0xadd8e6 )
         self.embed.add_field(name="**__OPTION 1__**", value="**0**", inline=False)
         self.embed.add_field(name="**__OPTION 2__**", value="**0**", inline=False)
         self.embed.add_field(name="**__OPTION 3__**", value="**0**", inline=False)
-        self.embed.set_thumbnail(url="https://cdn.discordapp.com/attachments/616413320756592669/643740476830253066/1482843918316947582.jpg")
-        self.embed.set_footer(text= 'Created By ﾉ尺θη シ SIDHARTH',icon_url="https://cdn.discordapp.com/attachments/624999602680102943/625027320213667877/JPEG_20190912_000156.jpg")
+        self.embed.set_thumbnail(url="https://https://cdn.discordapp.com/attachments/612933528191238166/682592039270875206/dream_master.jpg")
+        self.embed.set_footer(text= 'Created By ﾉ尺θη シ SIDHARTH & ⎝⎝𝕄𝐫.𝔻ƗƤ€ŞĦ⎠⎠👻',icon_url="https://cdn.discordapp.com/attachments/612933528191238166/682592039270875206/dream_master.jpg ")
         #self.embed_msg.add_reaction("✔️")
 
 
@@ -141,8 +141,7 @@ class Bot(discord.Client):
             self.answer_scores[i]=0
 
     async def update_embeds(self):
-      #  global wrong
-
+      #  global wrong  
 
 
         one_check = ""
@@ -191,10 +190,8 @@ class Bot(discord.Client):
         self.embed.set_field_at(0, name="**__OPTION 1__**", value="**{0}**{1}".format(lst_scores[0], one_check))
         self.embed.set_field_at(1, name="**__OPTION 2__**", value="**{0}**{1}".format(lst_scores[1], two_check))
         self.embed.set_field_at(2, name="**__OPTION 3__**", value="**{0}**{1}".format(lst_scores[2], three_check))
-        self.embed.set_footer(text= 'Created By ﾉ尺θη シ SIDHARTH',icon_url="https://cdn.discordapp.com/attachments/624999602680102943/625027320213667877/JPEG_20190912_000156.jpg")
-        
-
-        if self.embed_msg is not None:
+        self.embed.set_footer(text= 'Created By ﾉ尺θη シ SIDHARTH  & ⎝⎝𝕄𝐫.𝔻ƗƤ€ŞĦ⎠⎠👻',icon_url="cdn.discordapp.com/attachments/612933528191238166/682592039270875206/dream_master.jpg ")
+         
             await self.embed_msg.edit(embed=self.embed)
 
     async def on_ready(self):
@@ -206,7 +203,7 @@ class Bot(discord.Client):
         await self.clear_results()
         await self.update_embeds()
         #await self.change_presence(activity=discord.Game(name='with '+str(len(set(self.get_all_members())))+' users'))
-        await self.change_presence(activity=discord.Activity(type=1,name="Flipkart Answers!!"))
+        await self.change_presence(activity=discord.Activity(type=1,name="Loco Answers!!"))
 
     async def on_message(self, message):
 
